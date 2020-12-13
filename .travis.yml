@@ -1,0 +1,14 @@
+language: python
+python:
+- 3.8
+script: make test
+deploy:
+  provider: pypi
+  distributions: sdist bdist_wheel
+  user: csae8092
+  password:
+    secure: eYsKKmI8ytFQ1BRdaLspz75G23Qg9m8WQOsec6TdmGDzN0RqXvXdbueLO0yXx5OfpDnt+zVJ5huGTnIO1NOdMjpf5cPNxRVYG6Vdj9js5x8eNIxxxVYIdK9U9Avf/fwZk+7E+iNz35Alx/J0HuBkhrr8icJrPPCgATkoVLuTUGi3TI5R4qfZUp15yQ54/0ymiI25cNkI2LEmiMEBR5uaotjkkGkCPPPfgoW0Wgcds/GcRjpIYtKT+xxXLcqOJPuoj6DbmpevcZaqM9jXXjbkJx2WACDCtZP0JRgdKOvojCcDbwjKkx7iEJc0z1+t2hSrzczYmWHjLA4OcqcaAsTeHA0D0HdE2ybPi9BNXDWxIaipwhahjJM7Uma4ZxpYvqb/OX1C/neLcCEfW6SIh7WLL+BZ5NHQ+mJhNMIILw12uIVEnXxfQZQ70av1f46FjKKbjuqaUp6Xz7RIcnKYUvgDVMFxF8E1HzjTVdvRXWk1N2xvpi+RQK8QSJt7T/t3hoc8q3287kNT0vi6qrFSr4lfCUXRvu2YVkS0uHxkvmOv5rCcVxJCnD1BMHFR/PslINbVpyMIf+eT02d3dGJlMR8ThlE/GH3tLigRmfqqVexU4t8ZjMItZt1SDdBYJKbkDUzMGbY1wAk/ypRJ83WmIRYdEX/viqOq34KGn2Vh9hcbtC0=
+  on:
+    tags: true
+    repo: acdh-oeaw/acdh_abbr_client
+    python: 3.8
