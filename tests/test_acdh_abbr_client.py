@@ -6,7 +6,7 @@
 import unittest
 from click.testing import CliRunner
 
-# from acdh_abbr_client import acdh_abbr_client
+from acdh_abbr_client.acdh_abbr_client import yield_abbr
 from acdh_abbr_client import cli
 
 
@@ -19,8 +19,17 @@ class TestAcdh_abbr_client(unittest.TestCase):
     def tearDown(self):
         """Tear down test fixtures, if any."""
 
-    def test_000_something(self):
-        """Test something."""
+    def test_001_yield_abbr(self):
+        """yield_abbr"""
+
+        abbr_generator = yield_abbr()
+        self.assertTrue(abbr_generator.__next__().endswith(''))
+
+    def test_002_yield_abbr(self):
+        """yield_abbr"""
+
+        abbr_generator = yield_abbr(limit=True)
+        self.assertTrue(len(list(abbr_generator)) == 5)
 
     def test_command_line_interface(self):
         """Test the CLI."""
