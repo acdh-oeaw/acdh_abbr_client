@@ -14,9 +14,7 @@ ABBR Client
         :alt: Documentation Status
 
 
-.. image:: https://pyup.io/repos/github/acdh-oeaw/acdh_abbr_client/shield.svg
-     :target: https://pyup.io/repos/github/acdh-oeaw/acdh_abbr_client/
-     :alt: Updates
+.
 
 
 
